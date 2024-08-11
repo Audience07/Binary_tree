@@ -122,9 +122,8 @@ void BSortTree<T>::Traverse1(TreeNode<T>* TreeNode) {
 	else{
 		Traverse1(TreeNode->pLeft);
 		Traverse1(TreeNode->pRight);
-		char temp[20]{};
-		memcpy(temp, &TreeNode->element, 20);
-		std::cout << temp << std::endl;
+		Monster* m = &TreeNode->element;
+		std::cout << m->GetName() << std::endl;
 	}
 }
 
@@ -136,9 +135,8 @@ void BSortTree<T>::Traverse2(TreeNode<T>* TreeNode) {
 	}
 	else {
 		Traverse2(TreeNode->pLeft);
-		char temp[20]{};
-		memcpy(temp, &TreeNode->element, 20);
-		std::cout << temp << std::endl;
+		Monster* m = &TreeNode->element;
+		std::cout << m->GetName() << std::endl;
 		Traverse2(TreeNode->pRight);
 	}
 }
@@ -150,9 +148,8 @@ void BSortTree<T>::Traverse3(TreeNode<T>* TreeNode) {
 		return;
 	}
 	else {
-		char temp[20]{};
-		memcpy(temp, &TreeNode->element, 20);
-		std::cout << temp << std::endl;
+		Monster* m = &TreeNode->element;
+		std::cout << m->GetName() << std::endl;
 		Traverse3(TreeNode->pLeft);
 		Traverse3(TreeNode->pRight);
 	}

@@ -8,12 +8,14 @@ public:
 		this->Defenses = Defenses;
 		this->age = age;
 	}
-
+	char* GetName() {
+		return this->Name;
+	}
+	
 private:
 	char Name[20];
 	int Attack;
 	int Defenses;
 	int age;
 };
-
 
